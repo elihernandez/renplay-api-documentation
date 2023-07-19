@@ -1,0 +1,74 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Documentación del API REN>PLAY",
+        "version": "1.0.0",
+        "description": "Este espacio está diseñado para ayudarte y ser guía dentro del código que necesites, ¡Éxito en tu proyecto!"
+    },
+    "servers": [
+        {
+            "url": "https://api.renplay.com"
+        }
+    ],
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        },
+        "schemas": {
+            "usrLoginBody": {
+                "type": "object",
+                "properties": {
+                    "Email": {
+                        "type": "email",
+                        "example": "sarycazares@live.com.mx"
+                    },
+                    "Password": {
+                        "type": "password",
+                        "example": "JDJhJDEwJFpGcG54UjA0OWtKMHlQNUdVMkxjSHVrcnJ3OWRYb01xTEg0VzFFRHp5bUU0UkdaZk5Xek11"
+                    },
+                    "DeviceType": {
+                        "type": "string",
+                        "example": "iPhone 11 Pro Max"
+                    },
+                    "DevicePlatform": {
+                        "type": "string",
+                        "example": "iOS"
+                    },
+                    "DeviceVersion": {
+                        "type": "string",
+                        "example": "0.1.0"
+                    },
+                    "DeviceUUID": {
+                        "type": "string",
+                        "example": "228b0413-996f-47b0-8749-30f7d0405db2"
+                    }
+                }
+            }
+        }
+    },
+    "paths": {
+        "/usr/login": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Login del usuario",
+                "description": "Este endpoint es para que el usuario pueda iniciar sesión.<br><br>",
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": "#/components/schemas/usrLoginBody"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
