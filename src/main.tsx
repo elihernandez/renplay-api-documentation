@@ -12,38 +12,40 @@ import {
 } from "react-router-dom"
 import Subscription from './routes/subscription.tsx'
 import Creators from './routes/creators.tsx'
+import './index.css'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: 'usuarios', 
-    element: <Users />
-  },
-  {
-    path: 'inicio',
-    element: <Home />
-  },
-  {
-    path: 'audiolibros',
-    element: <AudioBooks />
-  },
-  {
-    path: 'musica',
-    element: <Music />
-  },
-  {
-    path: 'suscripcion',
-    element: <Subscription />
-  },
-  {
-    path: 'creadores',
-    element: <Creators />
+    children: [
+      {
+        path: 'usuarios',
+        element: <Users />
+      },
+      {
+        path: 'inicio',
+        element: <Home />
+      },
+      {
+        path: 'audiolibros',
+        element: <AudioBooks />
+      },
+      {
+        path: 'musica',
+        element: <Music />
+      },
+      {
+        path: 'suscripcion',
+        element: <Subscription />
+      },
+      {
+        path: 'creadores',
+        element: <Creators />
+      }
+    ]
   }
-
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
