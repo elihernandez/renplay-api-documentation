@@ -1,0 +1,103 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Documentación del API REN>PLAY",
+        "version": "1.0.0",
+        "description": "Este espacio está diseñado para ayudarte y ser guía dentro del código que necesites, ¡Éxito en tu proyecto!"
+    },
+    "servers": [
+        {
+            "url": "https://api.renplay.com"
+        }
+    ],
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        },
+        "schemas": {
+            "musicHomeBody": {
+                "type": "object",
+                "properties": {
+                  "DeviceID": {
+                    "type": "string",
+                    "example": "-C3M-VzZxiTrpuzNJkXV-DWaUF5_3VhoOGtEV3zQn0k"
+                    },
+                  "ProfileID": {
+                    "type": "number",
+                    "example": 63
+                    }
+                }
+            },
+            "musicSpotlightHomeBody": {
+                "type": "object",
+      
+                  "properties": {
+                    "DeviceID": {
+                      "type": "string",
+                      "example": "ObUdavVpzk32y8o-Y0KLPMZUDVz8WCTtIsUHdrX1ehE"
+                          },
+                    "ProfileID": {
+                      "type": "number",
+                      "example": "0"
+                          }
+                      }
+                  }
+        }
+    },
+    "paths": {
+        "/musi/section/home": {
+            "put": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Home"
+                ],
+                "summary": "Login del usuario",
+                "description": "Este endpoint es para que el usuario pueda iniciar sesión.<br><br>",
+                "requestBody": {           
+                        "schema": {
+                            "$ref": "#/components/schemas/musicHomeBody"
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": "#/components/schemas/musicHomeBody"
+                        }
+                    }
+                }
+            }
+        },
+        "/music/spotlight/home": {
+            "put": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Home"
+                ],
+                "summary": "Login del usuario",
+                "description": "Este endpoint es para que el usuario pueda iniciar sesión.<br><br>",
+                "requestBody": {           
+                        "schema": {
+                            "$ref": "#/components/schemas/musicSpotlightHomeBody"
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": "#/components/schemas/musicHomeBody"
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

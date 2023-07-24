@@ -1,0 +1,178 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Documentación del API REN>PLAY",
+        "version": "1.0.0",
+        "description": "Este espacio está diseñado para ayudarte y ser guía dentro del código que necesites, ¡Éxito en tu proyecto!"
+    },
+    "servers": [
+        {
+            "url": "https://api.renplay.com"
+        }
+    ],
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        },
+        "schemas": {
+            "musicHomeBody": {
+                "type": "object",
+                "properties": {
+                  "DeviceID": {
+                    "type": "string",
+                    "example": "-C3M-VzZxiTrpuzNJkXV-DWaUF5_3VhoOGtEV3zQn0k"
+                    },
+                  "ProfileID": {
+                    "type": "number",
+                    "example": 63
+                    }
+                }
+            }
+        }
+    },
+    "paths": {
+        "/subscription/status": {
+            "put": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Subscription"
+                ],
+                "summary": "Status de suscripción",
+                "description": "Este endpoint muestra el status de la subscripción del usuario.<br><br>",
+                "requestBody": {           
+                        "schema": {
+                            "$ref": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/subscription/packs": {
+            "put": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Subscription"
+                ],
+                "summary": "Planes de suscripción",
+                "description": "Este endpoint muestra los paquetes disponibles para la subscripción del usuario.<br><br>",
+                "requestBody": {           
+                        "schema": {
+                            "$ref": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/subscription/demo": {
+            "put": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Subscription"
+                ],
+                "summary": "Prueba gratis",
+                "description": "Este endpoint le permite al usuario tener un paquete de suscrpción gratis por 7 días (Prueba gratuita).<br><br>",
+                "requestBody": {           
+                        "schema": {
+                            "$ref": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/subscription/valcup": {
+            "put": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Subscription"
+                ],
+                "summary": "Validar cupón",
+                "description": "Este endpoint valida un cupón de descuento ingresado por el usuario.<br><br>",
+                "requestBody": {           
+                        "schema": {
+                            "PromoCode": "PromoTest2023OK",
+                            "SubRegID": 10
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/subscription/subscribe": {
+            "put": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Subscription"
+                ],
+                "summary": "Añadir suscripción de un usuario",
+                "description": "Este endpoint define la suscripción del paquete que el usuario haya elegido.<br><br>",
+                "requestBody": {           
+                        "schema": {
+                            "SuscriberID": "h3lZVO-mkP2NfTq5p8LObLzhPg0CMp9rdQwqFVpk0TA=",
+                            "SubscriptionInfo": {
+                                "SubID": 10,
+                                "AmountDebt": 58.65,
+                                "DiscountCode": "PromoTest2023OK"
+                            },
+                            "PaymentCard": {
+                                "card_number": "4111111111111111",
+                                "holder_name": "Sary Cazares",
+                                "expiration_year": "24",
+                                "expiration_month": "08",
+                                "cvv2": "123"
+                            }
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
+}

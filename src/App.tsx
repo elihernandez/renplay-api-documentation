@@ -9,11 +9,21 @@ const App = () => {
           <li>
             <a href="/usuarios">Usuarios</a>
           </li>
-          <li>Home</li>
-          <li>Audiolibros</li>
-          <li>Musica</li>
-          <li>Suscripción</li>
-          <li>Creadores</li>
+          <li>
+            <a href="/inicio">Home</a>
+          </li>
+          <li>
+            <a href="/audiolibros">AudioLibros</a>
+          </li>
+          <li>
+            <a href="/musica">Music</a>
+          </li>
+          <li>
+            <a href="/suscripcion">Subscripción</a>
+          </li>
+          <li>
+            <a href="/creadores">Creadores</a>
+          </li>
         </ul>
       </div>
       <SwaggerUI url="/data.json" />

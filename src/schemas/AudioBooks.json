@@ -1,0 +1,68 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Documentación del API REN>PLAY",
+        "version": "1.0.0",
+        "description": "Este espacio está diseñado para ayudarte y ser guía dentro del código que necesites, ¡Éxito en tu proyecto!"
+    },
+    "servers": [
+        {
+            "url": "https://api.renplay.com"
+        }
+    ],
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        },
+        "schemas": {
+            "musicHomeBody": {
+                "type": "object",
+                "properties": {
+                  "DeviceID": {
+                    "type": "string",
+                    "example": "-C3M-VzZxiTrpuzNJkXV-DWaUF5_3VhoOGtEV3zQn0k"
+                    },
+                  "ProfileID": {
+                    "type": "number",
+                    "example": 63
+                    }
+                }
+            }
+        }
+    },
+    "paths": {
+        "/music/audiobook/{id}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "AudioBooks"
+                ],
+                "summary": "Login del usuario",
+                "description": "Este endpoint es para que el usuario pueda iniciar sesión.<br><br>",
+                "parameters": {
+                    "- in": "path",
+                    "name": "id",
+                        "schema": {
+                            "type": "integer",
+                        "description": "The mode of a workout"
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": "#/components/schemas/musicHomeBody"
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
+}

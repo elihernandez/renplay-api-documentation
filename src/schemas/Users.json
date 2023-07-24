@@ -47,7 +47,17 @@
                     }
                 }
             }
-        }
+        },
+        "userInfoBody": {
+            "type": "object",
+            "properties": {
+  
+              "SuscriberID": {
+                "type": "string",
+                "example": "Xqb17-cj7huwqJKUqdVqoEECifdh_ae1-t1LnZyqkPI="
+                      }
+                  }
+              }
     },
     "paths": {
         "/usr/login": {
@@ -60,15 +70,523 @@
                 ],
                 "summary": "Login del usuario",
                 "description": "Este endpoint es para que el usuario pueda iniciar sesión.<br><br>",
+                "requestBody": {           
+                        "schema": {
+                            "$ref": "#/components/schemas/usrLoginBody"
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                            "schema": {
+                                "$href": ""
+                            }
+                    }
+                }
+            }
+        },
+        "/usr/info": {
+            "put": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Login del usuario",
+                "description": "Este endpoint es para que el usuario pueda iniciar sesión.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": "#/components/schemas/usrInfoBody"
+                        }
+                },
                 "responses": {
                     "200": {
                         "description": "El usuario ingresó con éxito",
                         "schema": {
-                            "$ref": "#/components/schemas/usrLoginBody"
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/create": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Crear usuario",
+                "description": "Este endpoint es para crear un usuario.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/validate/email": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Validar email",
+                "description": "Este endpoint es para validar un email.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/verify/email": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Verificar email",
+                "description": "Este endpoint es para verificar un email.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/validate/phone": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Validar teléfono",
+                "description": "Este endpoint es para validar el teléfono del usuario.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/verify/phone": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Verificar teléfono",
+                "description": "Este endpoint es para verificar el teléfono del usuario.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/update/name": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Actualizar nombre",
+                "description": "Este endpoint es para actualizar el nombre del usuario.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/update/masterpin": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Actualizar masterpin",
+                "description": "Este endpoint es para actualizar el masterpin del usuario.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/update/pass": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Actualizar contraseña",
+                "description": "Este endpoint es para actualizar la contraseña del usuario.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/update/email": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Actualizar correo electronico",
+                "description": "Este endpoint es para actualizar el correo eletrónico del usuario.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/reset/pass": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Restaurar contraseña",
+                "description": "Este endpoint es para restaurar la contraseña del usuario.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/update/phone": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Actualizar teléfono",
+                "description": "Este endpoint es para actualizar el número de teléfono del usuario.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/update/user": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Actualizar usuario",
+                "description": "Este endpoint es para actualizar el usuario.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/validation": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Validar usuario",
+                "description": "Este endpoint permite al usuario validar su información.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/profiles": {
+            "put": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Lista de perfiles",
+                "description": "Este endpoint le permite al usuario ver la lista de perfiles que hay en la cuenta.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/profile": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Eliminar",
+                "description": "Este endpoint le permite al usuario agregar un nuevo perfil.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/profil": {
+            "delete": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Agregar perfil",
+                "description": "Este endpoint le permite al usuario agregar un nuevo perfil.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/profiles/imgs": {
+            "put": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Imágenes para perfiles",
+                "description": "Este endpoint le muestra al usuario imágenes que puede utilizar para identificar su perfil.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/devices": {
+            "put": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Lista de dispositivos",
+                "description": "Este endpoint muestra la lista de dispositivos ligados al usuario.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/usr/device": {
+            "delete": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Eliminar dispositivo",
+                "description": "Este endpoint elimina un dispositivo ligado al usuario.<br><br>",
+                "content":{
+                        "schema": {
+                            "$href": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
                         }
                     }
                 }
             }
         }
+
     }
+    
+    
 }
