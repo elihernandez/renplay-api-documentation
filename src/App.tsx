@@ -27,13 +27,19 @@ const App = () => {
               </a>
             </li>
             <li>
-              <Dropdown title="Álbum" elements={albumElements} />
+              <Dropdown title="Home" elements={homeElements} />
             </li>
             <li>
-              <Dropdown title="Artista" elements={artistElements} />
+              <Dropdown title="AudioBook" elements={audioBookElements} />
             </li>
             <li>
-              <Dropdown title="Audiolibros" elements={audiobookElements} />
+              <Dropdown title="Music" elements={musicElements} />
+            </li>
+            <li>
+              <Dropdown title="Subscription" elements={subscriptionElements} />
+            </li>
+            <li>
+              <Dropdown title="Creators" elements={creatorElements} />
             </li>
           </ul>
         </div>
@@ -42,15 +48,15 @@ const App = () => {
       <div id="detail">
         <Outlet />
       </div>
-      {/* <SwaggerUI url="/data.json" /> */}
+      { /*<SwaggerUI url="/data.json" />*/ }
     </div>
   )
 }
 
-const albumElements: DropdownElementsProps[] = [
+const homeElements: DropdownElementsProps[] = [
   {
     title: 'Crear',
-    path: 'album/crear'
+    path: 'inicio'
   },
   {
     title: 'Editar',
@@ -62,7 +68,7 @@ const albumElements: DropdownElementsProps[] = [
   }
 ]
 
-const artistElements: DropdownElementsProps[] = [
+const audioBookElements: DropdownElementsProps[] = [
   {
     title: 'Crear',
     path: 'artist/crear'
@@ -77,7 +83,45 @@ const artistElements: DropdownElementsProps[] = [
   }
 ]
 
-const audiobookElements: DropdownElementsProps[] = [
+const musicElements: DropdownElementsProps[] = [
+  {
+    title: 'Crear',
+    path: 'audiobook/crear'
+  },
+  {
+    title: 'Editar',
+    path: 'audiobook/editar'
+  },
+  {
+    title: 'Eliminar',
+    path: 'audiobook/eliminar'
+  },
+  {
+    title: 'Eliminar',
+    path: 'audiobook/eliminar'
+  }
+]
+
+const subscriptionElements: DropdownElementsProps[] = [
+  {
+    title: 'Crear',
+    path: 'audiobook/crear'
+  },
+  {
+    title: 'Editar',
+    path: 'audiobook/editar'
+  },
+  {
+    title: 'Eliminar',
+    path: 'audiobook/eliminar'
+  },
+  {
+    title: 'Eliminar',
+    path: 'audiobook/eliminar'
+  }
+]
+
+const creatorElements: DropdownElementsProps[] = [
   {
     title: 'Crear',
     path: 'audiobook/crear'
