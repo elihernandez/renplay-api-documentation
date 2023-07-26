@@ -13,6 +13,7 @@ import {
 import Subscription from './routes/subscription.tsx'
 import Creators from './routes/creators.tsx'
 import './index.css'
+import 'flowbite'
 
 const router = createBrowserRouter([
   {

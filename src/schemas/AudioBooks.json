@@ -40,10 +40,10 @@
                     "application/json"
                 ],
                 "tags": [
-                    "AudioBooks"
+                    "Mostrar"
                 ],
-                "summary": "Login del usuario",
-                "description": "Este endpoint es para que el usuario pueda iniciar sesión.<br><br>",
+                "summary": "AudioLibro",
+                "description": "Este endpoint devuelve un audiolibro enviando el id.<br><br>",
                 "parameters": {
                     "- in": "path",
                     "name": "id",

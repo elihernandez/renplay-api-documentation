@@ -66,7 +66,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Iniciar"
                 ],
                 "summary": "Login del usuario",
                 "description": "Este endpoint es para que el usuario pueda iniciar sesión.<br><br>",
@@ -91,9 +91,9 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Información"
                 ],
-                "summary": "Login del usuario",
+                "summary": "Información",
                 "description": "Este endpoint es para que el usuario pueda iniciar sesión.<br><br>",
                 "content":{
                         "schema": {
@@ -116,7 +116,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Crear"
                 ],
                 "summary": "Crear usuario",
                 "description": "Este endpoint es para crear un usuario.<br><br>",
@@ -141,7 +141,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Validar"
                 ],
                 "summary": "Validar email",
                 "description": "Este endpoint es para validar un email.<br><br>",
@@ -166,7 +166,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Verificar"
                 ],
                 "summary": "Verificar email",
                 "description": "Este endpoint es para verificar un email.<br><br>",
@@ -191,7 +191,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Validar"
                 ],
                 "summary": "Validar teléfono",
                 "description": "Este endpoint es para validar el teléfono del usuario.<br><br>",
@@ -216,7 +216,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Verificar"
                 ],
                 "summary": "Verificar teléfono",
                 "description": "Este endpoint es para verificar el teléfono del usuario.<br><br>",
@@ -241,7 +241,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Actualizar"
                 ],
                 "summary": "Actualizar nombre",
                 "description": "Este endpoint es para actualizar el nombre del usuario.<br><br>",
@@ -266,7 +266,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Actualizar"
                 ],
                 "summary": "Actualizar masterpin",
                 "description": "Este endpoint es para actualizar el masterpin del usuario.<br><br>",
@@ -291,7 +291,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Actualizar"
                 ],
                 "summary": "Actualizar contraseña",
                 "description": "Este endpoint es para actualizar la contraseña del usuario.<br><br>",
@@ -316,7 +316,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Actualizar"
                 ],
                 "summary": "Actualizar correo electronico",
                 "description": "Este endpoint es para actualizar el correo eletrónico del usuario.<br><br>",
@@ -341,7 +341,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Resetear"
                 ],
                 "summary": "Restaurar contraseña",
                 "description": "Este endpoint es para restaurar la contraseña del usuario.<br><br>",
@@ -366,7 +366,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Actualizar"
                 ],
                 "summary": "Actualizar teléfono",
                 "description": "Este endpoint es para actualizar el número de teléfono del usuario.<br><br>",
@@ -391,7 +391,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Actualizar"
                 ],
                 "summary": "Actualizar usuario",
                 "description": "Este endpoint es para actualizar el usuario.<br><br>",
@@ -416,7 +416,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Validar"
                 ],
                 "summary": "Validar usuario",
                 "description": "Este endpoint permite al usuario validar su información.<br><br>",
@@ -441,7 +441,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Lista"
                 ],
                 "summary": "Lista de perfiles",
                 "description": "Este endpoint le permite al usuario ver la lista de perfiles que hay en la cuenta.<br><br>",
@@ -466,9 +466,9 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Agregar"
                 ],
-                "summary": "Eliminar",
+                "summary": "Agregar perfil",
                 "description": "Este endpoint le permite al usuario agregar un nuevo perfil.<br><br>",
                 "content":{
                         "schema": {
@@ -491,9 +491,9 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Eliminar"
                 ],
-                "summary": "Agregar perfil",
+                "summary": "Eliminar",
                 "description": "Este endpoint le permite al usuario agregar un nuevo perfil.<br><br>",
                 "content":{
                         "schema": {
@@ -516,7 +516,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Lista"
                 ],
                 "summary": "Imágenes para perfiles",
                 "description": "Este endpoint le muestra al usuario imágenes que puede utilizar para identificar su perfil.<br><br>",
@@ -541,7 +541,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Lista"
                 ],
                 "summary": "Lista de dispositivos",
                 "description": "Este endpoint muestra la lista de dispositivos ligados al usuario.<br><br>",
@@ -566,7 +566,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Usuarios"
+                    "Eliminar"
                 ],
                 "summary": "Eliminar dispositivo",
                 "description": "Este endpoint elimina un dispositivo ligado al usuario.<br><br>",

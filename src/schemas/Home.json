@@ -48,16 +48,16 @@
         }
     },
     "paths": {
-        "/musi/section/home": {
+        "/music/section/home": {
             "put": {
                 "produces": [
                     "application/json"
                 ],
                 "tags": [
-                    "Home"
+                    "Inicio"
                 ],
-                "summary": "Login del usuario",
-                "description": "Este endpoint es para que el usuario pueda iniciar sesión.<br><br>",
+                "summary": "Inicio",
+                "description": "Este endpoint lleva al usuario al inicio de la aplicación.<br><br>",
                 "requestBody": {           
                         "schema": {
                             "$ref": "#/components/schemas/musicHomeBody"
@@ -79,10 +79,10 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Home"
+                    "Inicio"
                 ],
-                "summary": "Login del usuario",
-                "description": "Este endpoint es para que el usuario pueda iniciar sesión.<br><br>",
+                "summary": "Spotlight",
+                "description": "Este endpoint muestra los anuncios que la aplicación tiene para el usuario, como lo más nuevo o tendencias.<br><br>",
                 "requestBody": {           
                         "schema": {
                             "$ref": "#/components/schemas/musicSpotlightHomeBody"

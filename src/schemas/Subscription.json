@@ -40,7 +40,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Subscription"
+                    "Obtener"
                 ],
                 "summary": "Status de suscripción",
                 "description": "Este endpoint muestra el status de la subscripción del usuario.<br><br>",
@@ -65,7 +65,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Subscription"
+                    "Paquetes"
                 ],
                 "summary": "Planes de suscripción",
                 "description": "Este endpoint muestra los paquetes disponibles para la subscripción del usuario.<br><br>",
@@ -90,7 +90,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Subscription"
+                    "Demo"
                 ],
                 "summary": "Prueba gratis",
                 "description": "Este endpoint le permite al usuario tener un paquete de suscrpción gratis por 7 días (Prueba gratuita).<br><br>",
@@ -115,7 +115,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Subscription"
+                    "Validar"
                 ],
                 "summary": "Validar cupón",
                 "description": "Este endpoint valida un cupón de descuento ingresado por el usuario.<br><br>",
@@ -141,7 +141,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Subscription"
+                    "Agregar"
                 ],
                 "summary": "Añadir suscripción de un usuario",
                 "description": "Este endpoint define la suscripción del paquete que el usuario haya elegido.<br><br>",

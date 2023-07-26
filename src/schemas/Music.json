@@ -54,9 +54,9 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Music"
+                    "Llamar"
                 ],
-                "summary": "Album",
+                "summary": "Álbum",
                 "description": "Este endpoint muestra el albúm llamado por medio del id.<br><br>",
                 "requestBody": {           
                         "schema": {
@@ -79,7 +79,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Music"
+                    "Llamar"
                 ],
                 "summary": "Artista",
                 "description": "Este endpoint muestra todo sobre el artista llamado por medio del id.<br><br>",
@@ -104,7 +104,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Music"
+                    "Llamar"
                 ],
                 "summary": "Playlist",
                 "description": "Este endpoint muestra la playlist llamada por medio del id.<br><br>",
@@ -129,7 +129,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Music"
+                    "Crear"
                 ],
                 "summary": "Playlist",
                 "description": "Este endpoint es para crear una nueva playlist.<br><br>",
@@ -154,10 +154,10 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Music"
+                    "Editar"
                 ],
-                "summary": "Crear playlist",
-                "description": "Este endpoint es para crear una nueva playlist.<br><br>",
+                "summary": "Editar playlist",
+                "description": "Este endpoint es para editar una playlist.<br><br>",
                 "requestBody": {           
                         "schema": {
                             "$ref": "#/components/schemas/musicHomeBody"
@@ -179,7 +179,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Music"
+                    "Eliminar"
                 ],
                 "summary": "Eliminar playlist",
                 "description": "Este endpoint es para eliminar una playlist.<br><br>",
@@ -204,7 +204,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Music"
+                    "Agregar"
                 ],
                 "summary": "Agregar track a playlist",
                 "description": "Este endpoint es para agregar una canción a una playlist.<br><br>",
@@ -229,7 +229,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Music"
+                    "Eliminar"
                 ],
                 "summary": "Eliminar track de playlist",
                 "description": "Este endpoint es para eliminar un track de una playList.<br><br>",
@@ -254,7 +254,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Music"
+                    "Obtener"
                 ],
                 "summary": "Obtener playlist",
                 "description": "Este endpoint obtiene los playlist del usuario por profile ID.<br><br>",
@@ -279,7 +279,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Music"
+                    "Obtener"
                 ],
                 "summary": "Obtener tracklink",
                 "description": "Este enpoint obtiene el link de reproducción del track, mismo que contiene un código de protección.<br><br>",
@@ -304,7 +304,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Music"
+                    "Obtener"
                 ],
                 "summary": "Feedback",
                 "description": "Este enpoint nos sirve para otorgar el Feedback de un elemento.<br><br>",

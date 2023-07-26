@@ -54,10 +54,10 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Creators"
+                    "Lista"
                 ],
                 "summary": "Lista de artistas",
-                "description": "Este endpoint muestra todos los artistas.<br><br>",
+                "description": "Este endpoint muestra una lista de todos los artistas.<br><br>",
                 "requestBody": {           
                         "schema": {
                             "$ref": ""
@@ -79,9 +79,9 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Creators"
+                    "Editar"
                 ],
-                "summary": "Editar",
+                "summary": "Editar artista",
                 "description": "Este endpointes para editar la información del artista.<br><br>",
                 "requestBody": {           
                         "schema": {
@@ -104,9 +104,9 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Creators"
+                    "Crear"
                 ],
-                "summary": "Crear",
+                "summary": "Crear artista",
                 "description": "Este endpoint es para crear un artista.<br><br>",
                 "requestBody": {           
                         "schema": {
@@ -129,9 +129,9 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Creators"
+                    "Eliminar"
                 ],
-                "summary": "Eliminar",
+                "summary": "Eliminar lista",
                 "description": "Este endpoint elimina una lista de album por medio del ArtistID.<br><br>",
                 "requestBody": {           
                         "schema": {
@@ -154,7 +154,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Creators"
+                    "Crear"
                 ],
                 "summary": "Crear álbum",
                 "description": "Este endpoint es para crear un nuevo álbum.<br><br>",
@@ -179,7 +179,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Creators"
+                    "Editar"
                 ],
                 "summary": "Editar álbum",
                 "description": "Este endpoint es para editar un álbum.<br><br>",
@@ -204,7 +204,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Creators"
+                    "Eliminar"
                 ],
                 "summary": "Eliminar álbum",
                 "description": "Este endpoint elimina un album de la lista de album por medio del AlbumID.<br><br>",
@@ -229,7 +229,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Creators"
+                    "Lista"
                 ],
                 "summary": "Lista de álbum",
                 "description": "Este endpoint muestra la lista de los álbums existentes.<br><br>",
@@ -254,7 +254,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Creators"
+                    "Crear"
                 ],
                 "summary": "Crear track",
                 "description": "Este endpoint crea un track.<br><br>",
@@ -279,7 +279,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Creators"
+                    "Editar"
                 ],
                 "summary": "Editar track",
                 "description": "Este endpoint permite editar un track.<br><br>",
@@ -304,7 +304,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Creators"
+                    "Eliminar"
                 ],
                 "summary": "Eliminar track",
                 "description": "Este endpoint permite eliminar un track.<br><br>",
