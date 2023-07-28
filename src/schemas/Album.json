@@ -1,0 +1,164 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Documentación del API REN>PLAY",
+        "version": "1.0.0",
+        "description": "Este espacio está diseñado para ayudarte y ser guía dentro del código que necesites, ¡Éxito en tu proyecto!"
+    },
+    "servers": [
+        {
+            "url": "https://api.renplay.com"
+        }
+    ],
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        },
+        "schemas": {
+            "musicHomeBody": {
+                "type": "object",
+                "properties": {
+                  "DeviceID": {
+                    "type": "string",
+                    "example": "-C3M-VzZxiTrpuzNJkXV-DWaUF5_3VhoOGtEV3zQn0k"
+                    },
+                  "ProfileID": {
+                    "type": "number",
+                    "example": 63
+                    }
+                }
+            }
+        }
+    },
+    "paths": {
+        "/music/album/{id}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    ""
+                ],
+                "summary": "Álbum",
+                "description": "Este endpoint muestra el albúm llamado por medio del id.<br><br>",
+                "requestBody": {           
+                        "schema": {
+                            "$ref": "#/components/schemas/musicHomeBody"
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": "#/components/schemas/musicHomeBody"
+                        }
+                    }
+                }
+            }
+        },
+        "/creators/list/album": {
+            "put": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    ""
+                ],
+                "summary": "Lista de álbum",
+                "description": "Este endpoint muestra la lista de los álbums existentes.<br><br>",
+                "requestBody": {           
+                        "schema": {
+                            "$ref": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/creators/album": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    ""
+                ],
+                "summary": "Crear álbum",
+                "description": "Este endpoint es para crear un nuevo álbum.<br><br>",
+                "requestBody": {           
+                        "schema": {
+                            "$ref": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/creator/album": {
+            "put": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    ""
+                ],
+                "summary": "Editar álbum",
+                "description": "Este endpoint es para editar un álbum.<br><br>",
+                "requestBody": {           
+                        "schema": {
+                            "$ref": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        },
+        "/creato/album": {
+            "delete": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    ""
+                ],
+                "summary": "Eliminar álbum",
+                "description": "Este endpoint elimina un album de la lista de album por medio del AlbumID.<br><br>",
+                "requestBody": {           
+                        "schema": {
+                            "$ref": ""
+                        }
+                },
+                "responses": {
+                    "200": {
+                        "description": "El usuario ingresó con éxito",
+                        "schema": {
+                            "$ref": ""
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

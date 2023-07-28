@@ -14,6 +14,8 @@ import Subscription from './routes/subscription.tsx'
 import Creators from './routes/creators.tsx'
 import './index.css'
 import 'flowbite'
+import Album from './routes/album.tsx'
+import Playlist from './routes/playlist.tsx'
 
 const router = createBrowserRouter([
   {
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
       {
         path: 'creadores',
         element: <Creators />
+      },
+      {
+        path: 'album',
+        element: <Album />
+      },
+      {
+        path: 'playlist',
+        element: <Playlist />
       }
     ]
   }
