@@ -21,13 +21,13 @@
             "musicHomeBody": {
                 "type": "object",
                 "properties": {
-                  "DeviceID": {
-                    "type": "string",
-                    "example": "-C3M-VzZxiTrpuzNJkXV-DWaUF5_3VhoOGtEV3zQn0k"
+                    "DeviceID": {
+                        "type": "string",
+                        "example": "-C3M-VzZxiTrpuzNJkXV-DWaUF5_3VhoOGtEV3zQn0k"
                     },
-                  "ProfileID": {
-                    "type": "number",
-                    "example": 63
+                    "ProfileID": {
+                        "type": "number",
+                        "example": 63
                     }
                 }
             }
@@ -47,10 +47,10 @@
                 "parameters": {
                     "- in": "path",
                     "name": "id",
-                        "schema": {
-                            "type": "integer",
+                    "schema": {
+                        "type": "integer",
                         "description": "The mode of a workout"
-                        }
+                    }
                 },
                 "responses": {
                     "200": {
@@ -62,7 +62,5 @@
                 }
             }
         }
-        
     }
-    
 }

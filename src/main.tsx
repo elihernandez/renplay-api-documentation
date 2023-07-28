@@ -14,8 +14,12 @@ import Subscription from './routes/subscription.tsx'
 import Creators from './routes/creators.tsx'
 import './index.css'
 import 'flowbite'
-import Album from './routes/album.tsx'
+import Album from './routes/album/album.tsx'
 import Playlist from './routes/playlist.tsx'
+import CreateAlbum from './routes/album/create.tsx'
+import Albums from './routes/album/albums.tsx'
+import EditAlbum from './routes/album/edit.tsx'
+import DeleteAlbum from './routes/album/delete.tsx'
 
 const router = createBrowserRouter([
   {
@@ -49,7 +53,29 @@ const router = createBrowserRouter([
       },
       {
         path: 'album',
-        element: <Album />
+        element: <Album />,
+        // children: [
+        //   {
+        //     path: 'crear',
+        //     element: <CreateAlbum />
+        //   }
+        // ]
+      },
+      {
+        path: 'albums',
+        element: <Albums />
+      },
+      {
+        path: 'album/crear',
+        element: <CreateAlbum />
+      },
+      {
+        path: 'album/editar',
+        element: <EditAlbum />
+      },
+      {
+        path: 'album/eliminar',
+        element: <DeleteAlbum />
       },
       {
         path: 'playlist',
