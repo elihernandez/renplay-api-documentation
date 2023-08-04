@@ -1,14 +1,14 @@
 import SwaggerUI from "swagger-ui-react"
-import { album } from '../../schemas/Album'
+import { feedback } from '../../schemas/Feedback'
 import { getSwaggerUISpec } from '../../schemas/Template'
 
-export default function Albums() {
+export default function GetFeedback() {
     const schemas = {
-        ...album.schemas.getAlbums
+        ...feedback.schemas.getFeedback
     }
 
     const paths = {
-        ...album.paths.getAlbums,
+        ...feedback.paths.getFeedback
     }
 
     return (

@@ -4,7 +4,7 @@ import { getSwaggerUISpec } from '../../schemas/Template'
 
 export default function EditAlbum() {
     const schemas = {
-        ...album.schemas.album
+        ...album.schemas.editAlbum
     }
 
     const paths = {

@@ -1,14 +1,14 @@
 import SwaggerUI from "swagger-ui-react"
-import { album } from '../../schemas/Album'
+import { profile } from '../../schemas/Profile'
 import { getSwaggerUISpec } from '../../schemas/Template'
 
-export default function Albums() {
+export default function AddProfile() {
     const schemas = {
-        ...album.schemas.getAlbums
+        ...profile.schemas.addProfile
     }
 
     const paths = {
-        ...album.paths.getAlbums,
+        ...profile.paths.addProfile
     }
 
     return (

@@ -62,102 +62,165 @@ export function Sidebar() {
                         </a>
                     </li> */}
                     <li>
-                        <Dropdown title="Album" elements={albumLinks} />
+                        <Dropdown title="Users" elements={userElements} />
                     </li>
-                    {/* <li>
+                    <li>
+                        <Dropdown title="Update" elements={updateElements} />
+                    </li>
+                    <li>
                         <Dropdown title="Home" elements={homeElements} />
+                    </li>
+                    <li>
+                        <Dropdown title="Playlist" elements={playlistElements} />
+                    </li>
+                    <li>
+                        <Dropdown title="Album" elements={albumLinks} />
                     </li>
                     <li>
                         <Dropdown title="AudioBook" elements={audioBookElements} />
                     </li>
                     <li>
-                        <Dropdown title="Music" elements={musicElements} />
+                        <Dropdown title="Artist" elements={artistElements} />
+                    </li>
+                    <li>
+                        <Dropdown title="Track" elements={trackElements} />
                     </li>
                     <li>
                         <Dropdown title="Subscription" elements={subscriptionElements} />
                     </li>
                     <li>
-                        <Dropdown title="Creators" elements={creatorElements} />
-                    </li> */}
+                        <Dropdown title="Profile" elements={profileElements} />
+                    </li>
+                    <li>
+                        <Dropdown title="Device" elements={deviceElements} />
+                    </li>
+                    <li>
+                        <Dropdown title="Email" elements={emailElements} />
+                    </li>
+                    <li>
+                        <Dropdown title="Phone" elements={phoneElements} />
+                    </li>
+                    <li>
+                        <Dropdown title="Feedback" elements={feedbackElements} />
+                    </li>
                 </ul>
             </div>
         </aside>
     )
 }
 
+const userElements: DropdownElementsProps[] = [
+    {
+        title: 'Login',
+        path: '/user/login'
+    },
+    {
+        title: 'Info',
+        path: '/user/info'
+    },
+    {
+        title: 'Create User',
+        path: '/user/create'
+    },
+    {
+        title: 'Delete User',
+        path: '/user/delete'
+    },
+    {
+        title: 'Validation User',
+        path: '/user/validation'
+    },
+]
 
 const homeElements: DropdownElementsProps[] = [
     {
-        title: 'Crear',
-        path: 'inicio'
+        title: 'Get Home',
+        path: '/inicio'
     },
     {
-        title: 'Editar',
-        path: 'album/editar'
-    },
-    {
-        title: 'Eliminar',
-        path: 'album/eliminar'
+        title: 'Get Spotlight',
+        path: '/spotlight'
     }
 ]
 
 const audioBookElements: DropdownElementsProps[] = [
     {
-        title: 'Crear',
-        path: 'artist/crear'
-    },
-    {
-        title: 'Editar',
-        path: 'artist/editar'
-    },
-    {
-        title: 'Eliminar',
-        path: 'artist/eliminar'
+        title: 'Get AudioBook',
+        path: '/audiobook'
     }
 ]
 
-const musicElements: DropdownElementsProps[] = [
+const playlistElements: DropdownElementsProps[] = [
     {
-        title: 'Crear',
-        path: 'audiobook/crear'
+        title: 'Create playlist',
+        path: '/playlist/create'
     },
     {
-        title: 'Editar',
-        path: 'audiobook/editar'
+        title: 'Edit playlist',
+        path: '/playlist/edit'
     },
     {
-        title: 'Eliminar',
-        path: 'audiobook/eliminar'
+        title: 'Delete playlist',
+        path: '/playlist/delete'
+    },
+    {
+        title: 'Get playlist',
+        path: '/playlist'
+    },
+    {
+        title: 'Get playlists',
+        path: '/playlists'
+    }
+
+]
+
+const trackElements: DropdownElementsProps[] = [
+    {
+        title: 'Create Track',
+        path: '/track/create'
+    },
+    {
+        title: 'Edit Track',
+        path: '/track/edit'
+    },
+    {
+        title: 'Delete Track',
+        path: '/track/delete'
+    },
+    {
+        title: 'Add Track',
+        path: '/track/playlist/add'
+    },
+    {
+        title: 'Delete Track Playlist',
+        path: '/track/playlist/delete'
+    },
+    {
+        title: 'Get Tracklink',
+        path: '/tracklink/get'
     }
 ]
 
-const subscriptionElements: DropdownElementsProps[] = [
+const artistElements: DropdownElementsProps[] = [
     {
-        title: 'Crear',
-        path: 'audiobook/crear'
+        title: 'Get Artist',
+        path: 'artist'
     },
     {
-        title: 'Editar',
-        path: 'audiobook/editar'
+        title: 'Get Artists',
+        path: 'artists'
     },
     {
-        title: 'Eliminar',
-        path: 'audiobook/eliminar'
-    }
-]
-
-const creatorElements: DropdownElementsProps[] = [
-    {
-        title: 'Crear',
-        path: 'audiobook/crear'
+        title: 'Create Artist',
+        path: 'artist/create'
     },
     {
-        title: 'Editar',
-        path: 'audiobook/editar'
+        title: 'Edit Artist',
+        path: 'artist/edit'
     },
     {
-        title: 'Eliminar',
-        path: 'audiobook/eliminar'
+        title: 'Delete Artist',
+        path: 'artist/delete'
     }
 ]
 
@@ -172,14 +235,131 @@ const albumLinks: DropdownElementsProps[] = [
     },
     {
         title: 'Create Album',
-        path: '/album/crear'
+        path: '/album/create'
     },
     {
         title: 'Edit Album',
-        path: '/album/editar'
+        path: '/album/edit'
     },
     {
         title: 'Delete Album',
-        path: '/album/eliminar'
+        path: '/album/delete'
     },
+]
+
+const subscriptionElements: DropdownElementsProps[] = [
+    {
+        title: 'Get Status',
+        path: '/subscription/status'
+    },
+    {
+        title: 'Get Packs',
+        path: '/subscription/packs'
+    },
+    {
+        title: 'Get Demo',
+        path: '/subscription/demo'
+    },
+    {
+        title: 'Get Validate Cupon',
+        path: '/subscription/valcup'
+    },
+    {
+        title: 'Get subscribe',
+        path: '/subscription/subscribe'
+    },
+]
+
+const profileElements: DropdownElementsProps[] = [
+    {
+        title: 'Get Profiles',
+        path: '/profiles'
+    },
+    {
+        title: 'Add Profile',
+        path: '/profile/add'
+    },
+    {
+        title: 'Delete Profile',
+        path: '/profile/delete'
+    },
+    {
+        title: 'Get Img',
+        path: '/profiles/imgs'
+    }
+]
+
+const updateElements: DropdownElementsProps[] = [
+    {
+        title: 'Update Name',
+        path: '/update/name'
+    },
+    {
+        title: 'Update Masterpin',
+        path: '/update/masterpin'
+    },
+    {
+        title: 'Update Pass',
+        path: '/update/pass'
+    },
+    {
+        title: 'Update Email',
+        path: '/update/email'
+    },
+    {
+        title: 'Reset Pass',
+        path: '/reset/pass'
+    },
+    {
+        title: 'Update Phone',
+        path: '/update/phone'
+    },
+    {
+        title: 'Update User',
+        path: '/update/User'
+    }
+]
+
+const deviceElements: DropdownElementsProps[] = [
+    {
+        title: 'Get Devices',
+        path: '/devices'
+    },
+    {
+        title: 'Delete Devices',
+        path: '/device/delete'
+    }
+]
+
+const emailElements: DropdownElementsProps[] = [
+    {
+        title: 'Verify Email',
+        path: '/email/verify'
+    },
+    {
+        title: 'Validate Email',
+        path: '/email/validate'
+    }
+]
+
+const phoneElements: DropdownElementsProps[] = [
+    {
+        title: 'Verify Phone',
+        path: '/phone/verify'
+    },
+    {
+        title: 'Validate Phone',
+        path: '/phone/validate'
+    },
+    {
+        title: 'Update Phone',
+        path: '/phone/update'
+    }
+]
+
+const feedbackElements: DropdownElementsProps[] = [
+    {
+        title: 'Feedback',
+        path: '/feedback'
+    }
 ]

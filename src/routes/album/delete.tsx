@@ -4,7 +4,7 @@ import { getSwaggerUISpec } from '../../schemas/Template'
 
 export default function DeleteAlbum() {
     const schemas = {
-        ...album.schemas.album
+        ...album.schemas.deleteAlbum
     }
 
     const paths = {

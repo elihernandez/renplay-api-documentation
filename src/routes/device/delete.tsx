@@ -1,14 +1,14 @@
 import SwaggerUI from "swagger-ui-react"
-import { album } from '../../schemas/Album'
+import { device } from '../../schemas/Device'
 import { getSwaggerUISpec } from '../../schemas/Template'
 
-export default function Albums() {
+export default function DeleteDevices() {
     const schemas = {
-        ...album.schemas.getAlbums
+        ...device.schemas.deleteDevice
     }
 
     const paths = {
-        ...album.paths.getAlbums,
+        ...device.paths.deleteDevice
     }
 
     return (

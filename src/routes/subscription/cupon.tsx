@@ -1,14 +1,14 @@
 import SwaggerUI from "swagger-ui-react"
-import { album } from '../../schemas/Album'
+import { subscription } from '../../schemas/Subscription'
 import { getSwaggerUISpec } from '../../schemas/Template'
 
-export default function Albums() {
+export default function ValidateCupon() {
     const schemas = {
-        ...album.schemas.getAlbums
+        ...subscription.schemas.getValcup
     }
 
     const paths = {
-        ...album.paths.getAlbums,
+        ...subscription.paths.getValcup
     }
 
     return (

@@ -4,7 +4,7 @@ import { getSwaggerUISpec } from '../../schemas/Template'
 
 export default function CreateAlbum() {
     const schemas = {
-        ...album.schemas.album
+        ...album.schemas.createAlbum
     }
 
     const paths = {

@@ -1,14 +1,14 @@
 import SwaggerUI from "swagger-ui-react"
-import { album } from '../../schemas/Album'
+import { track } from '../../schemas/Track'
 import { getSwaggerUISpec } from '../../schemas/Template'
 
-export default function Albums() {
+export default function EditTrack() {
     const schemas = {
-        ...album.schemas.getAlbums
+        ...track.schemas.editTrack
     }
 
     const paths = {
-        ...album.paths.getAlbums,
+        ...track.paths.editTrack
     }
 
     return (

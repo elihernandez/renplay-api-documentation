@@ -1,14 +1,14 @@
 import SwaggerUI from "swagger-ui-react"
-import { album } from '../../schemas/Album'
+import { email } from '../../schemas/Email'
 import { getSwaggerUISpec } from '../../schemas/Template'
 
-export default function Albums() {
+export default function ValidateEmail() {
     const schemas = {
-        ...album.schemas.getAlbums
+        ...email.schemas.validateEmail
     }
 
     const paths = {
-        ...album.paths.getAlbums,
+        ...email.paths.validateEmail
     }
 
     return (

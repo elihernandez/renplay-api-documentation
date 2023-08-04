@@ -1,14 +1,14 @@
 import SwaggerUI from "swagger-ui-react"
-import { album } from '../../schemas/Album'
+import { home } from '../../schemas/Home'
 import { getSwaggerUISpec } from '../../schemas/Template'
 
-export default function Albums() {
+export default function Spotlight() {
     const schemas = {
-        ...album.schemas.getAlbums
+        ...home.schemas.spotlight
     }
 
     const paths = {
-        ...album.paths.getAlbums,
+        ...home.paths.getSpotlight
     }
 
     return (

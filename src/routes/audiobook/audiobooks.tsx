@@ -1,14 +1,14 @@
 import SwaggerUI from "swagger-ui-react"
-import { album } from '../../schemas/Album'
+import { audiobook } from '../../schemas/Audiobook'
 import { getSwaggerUISpec } from '../../schemas/Template'
 
-export default function Albums() {
+export default function AudioBook() {
     const schemas = {
-        ...album.schemas.getAlbums
+        ...audiobook.schemas.audiobook
     }
 
     const paths = {
-        ...album.paths.getAlbums,
+        ...audiobook.paths.getAudioBook
     }
 
     return (

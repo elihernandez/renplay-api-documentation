@@ -1,40 +1,7 @@
-{
-    "openapi": "3.0.0",
-    "info": {
-        "title": "Documentación del API REN>PLAY",
-        "version": "1.0.0",
-        "description": "Este espacio está diseñado para ayudarte y ser guía dentro del código que necesites, ¡Éxito en tu proyecto!"
-    },
-    "servers": [
-        {
-            "url": "https://api.renplay.com"
-        }
-    ],
-    "components": {
-        "securitySchemes": {
-            "bearerAuth": {
-                "type": "http",
-                "scheme": "bearer"
-            }
-        },
-        "schemas": {
-            "musicHomeBody": {
-                "type": "object",
-                "properties": {
-                  "DeviceID": {
-                    "type": "string",
-                    "example": "-C3M-VzZxiTrpuzNJkXV-DWaUF5_3VhoOGtEV3zQn0k"
-                    },
-                  "ProfileID": {
-                    "type": "number",
-                    "example": 63
-                    }
-                }
-            }
-        }
-    },
-    "paths": {
-        "/subscription/status": {
+export const subscription = {
+    paths: {
+        getStatus: {
+          "/subscription/status": {
             "put": {
                 "produces": [
                     "application/json"
@@ -58,8 +25,10 @@
                     }
                 }
             }
+          }
         },
-        "/subscription/packs": {
+        getPacks: {
+          "/subscription/packs": {
             "put": {
                 "produces": [
                     "application/json"
@@ -83,8 +52,10 @@
                     }
                 }
             }
+          }
         },
-        "/subscription/demo": {
+        getDemo: {
+          "/subscription/demo": {
             "put": {
                 "produces": [
                     "application/json"
@@ -108,8 +79,10 @@
                     }
                 }
             }
+          }
         },
-        "/subscription/valcup": {
+        getValcup: {
+          "/subscription/valcup": {
             "put": {
                 "produces": [
                     "application/json"
@@ -134,8 +107,10 @@
                     }
                 }
             }
+          }
         },
-        "/subscription/subscribe": {
+        getSubscribe: {
+          "/subscription/subscribe": {
             "put": {
                 "produces": [
                     "application/json"
@@ -171,8 +146,184 @@
                     }
                 }
             }
+          }
         }
-        
-    }
+    },
+    schemas: {
+        getStatus: {
+          "getSubscription":{
+            "type": "object",
+            "properties":{
     
+              "CurrentSuscriptionPeriod":{
+                "type": "null"
+              },
+              "SuscriberStatus":{
+                "type": "object",
+                "properties":{
+    
+                  "Code":{
+                    "type": "number",
+                  },
+                  "Msg":{
+                    "type": "string"
+                  }
+                }
+              },
+              "SubscriptionPkg":{
+                "type": "object",
+                "properties":{
+    
+                  "RegID":{
+                    "type": "number"
+                  },
+                  "PackageCode":{
+                    "type": "string"
+                  },
+                  "PackageName":{
+                    "type": "string"
+                  },
+                  "Notes":{
+                    "type": "null"
+                  },
+                  "Price":{
+                    "type": "number"
+                  },
+                  "Currency":{
+                    "type": "null"
+                  },
+                  "Poster":{
+                    "type": "null"
+                  },
+                  "TrialDays":{
+                    "type": "null"
+                  },
+                  "MaxDevices":{
+                    "type": "null"
+                  },
+                  "MaxConcurrentViewers":{
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        getPacks: {
+          "getPackage":{
+            "type": "object",
+            "properties":{
+    
+              "RegID":{
+                "type": "number"
+              },
+              "PackageCode":{
+                "type": "string"
+              },
+              "PackageName":{
+                "type": "string"
+              },
+              "Notes":{
+                "types": "string"
+              },
+              "Price":{
+                "type": "number"
+              },
+              "Currency":{
+                "type": "string"
+              },
+              "Poster":{
+                "type": "string"
+              },
+              "TrialDays":{
+                "type": "number"
+              },
+              "MaxDevices":{
+                "type": "number"
+              },
+              "MaxConcurrentViewers":{
+                "type": "number"
+              }
+            }
+          }
+        },
+        getDemo: {
+          "getDemo":{
+            "type": "object",
+            "properties":{
+    
+              "Msg":{
+                "type": "string"
+              },
+              "Code":{
+                "type": "number"
+              }
+            }
+          }
+        },
+        getValcup: {
+          "getValidateCupon":{
+            "type": "object",
+            "properties":{
+    
+              "Coupon":{
+                "type": "object",
+                "properties":{
+    
+                  "RegID":{
+                    "type": "number"
+                  },
+                  "ResellerID":{
+                    "type": "string"
+                  },
+                  "PromoCode":{
+                    "type": "string"
+                  },
+                  "PriceDiscountPct":{
+                    "type": "number"
+                  },
+                  "Countrylso2":{
+                    "type": "string"
+                  },
+                  "SubRegID":{
+                    "type": "number"
+                  },
+                  "ExpDate":{
+                    "type": "string"
+                  },
+                  "PromoCodeResponse":{
+                    "type": "number"
+                  }
+                }
+              },
+              "Response":{
+                "type": "object",
+                "properties":{
+    
+                  "Msg":{
+                    "type": "string"
+                  },
+                  "Code":{
+                    "type": "number"
+                  }
+                }
+              }
+            }     
+          }
+        },
+        getSubscribe: {
+          "getSubscribe":{
+            "type": "object",
+            "properties":{
+    
+              "Msg":{
+                "type": "string"
+              },
+              "Code":{
+                "type": "number"
+              }
+            }
+          }
+        }
+    }
 }

@@ -1,14 +1,14 @@
 import SwaggerUI from "swagger-ui-react"
-import { album } from '../../schemas/Album'
+import { playlist } from '../../schemas/Playlist'
 import { getSwaggerUISpec } from '../../schemas/Template'
 
-export default function Albums() {
+export default function Playlists() {
     const schemas = {
-        ...album.schemas.getAlbums
+        ...playlist.schemas.getPlaylists
     }
 
     const paths = {
-        ...album.paths.getAlbums,
+        ...playlist.paths.getPlaylists
     }
 
     return (
